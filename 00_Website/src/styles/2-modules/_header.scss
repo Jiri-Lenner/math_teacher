@@ -1,0 +1,38 @@
+//Global Styles
+@import "../1-global/0-global", "../0-shared/0-shared";
+@mixin header {
+  width: 100%;
+  font-family: "Noto Sans Display", sans-serif;
+  box-shadow: 0px 0px 5px 0.2px rgba(0, 0, 0, 0.2);
+
+  & > div {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    & > #site_logo:first-child::before {
+      content: none;
+    }
+
+    & > #site_logo {
+      //specifikace pro logo stránky
+    }
+
+    & > a:nth-child(2) {
+      margin-left: auto;
+    }
+
+    & > a ~ a {
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0.5em 0.7em;
+      margin: 1rem 0.7rem;
+      color: $darker-text;
+      text-decoration: none;
+      position: relative;
+    }
+
+    @include underline_animation;
+  }
+}

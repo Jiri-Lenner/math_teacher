@@ -1,0 +1,180 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body > header {
+  width: 100%;
+  font-family: "Noto Sans Display", sans-serif;
+  box-shadow: 0px 0px 5px 0.2px rgba(0, 0, 0, 0.2);
+}
+
+body > header > div {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+body > header > div > #site_logo:first-child::before {
+  content: none;
+}
+
+body > header > div > a:nth-child(2) {
+  margin-left: auto;
+}
+
+body > header > div > a ~ a {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.5em 0.7em;
+  margin: 1rem 0.7rem;
+  color: #3d4246;
+  text-decoration: none;
+  position: relative;
+}
+
+body > header > div > a::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transform: scalex(0);
+  transform-origin: right bottom;
+  bottom: 0;
+  display: inline-block;
+  height: 0.125rem;
+  background-color: #3d4246;
+  transition: transform 0.3s ease-in;
+}
+
+body > header > div > a:hover::before {
+  transform: scalex(1);
+  transition: transform 0.3s ease-in;
+  transform-origin: left bottom;
+}

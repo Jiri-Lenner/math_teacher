@@ -1,0 +1,16 @@
+//Header styles
+@import "../2-modules/header";
+//Main
+@import "../2-modules/main";
+//Footer
+@import "../2-modules/footer";
+//Header
+body > header {
+  @include header;
+}
+//Main
+body > main {
+}
+//Footer
+body > footer {
+}

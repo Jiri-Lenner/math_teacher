@@ -1,38 +1,123 @@
 //Global Styles
 @import "../1-global/0-global", "../0-shared/0-shared";
+// ==== NAV ====
 @mixin header {
   width: 100%;
-  font-family: "Noto Sans Display", sans-serif;
-  box-shadow: 0px 0px 5px 0.2px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > nav {
+    width: 100%;
+    font-family: "Noto Sans Display", sans-serif;
+    box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0);
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
 
-  & > div {
+    & > div {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      max-width: 2000px;
+
+      & > #site__logo:first-child::before {
+        content: none;
+      }
+
+      & > #site__logo {
+        //specifikace pro logo stránky
+      }
+
+      & > a ~ a {
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.5em 0.7em;
+        margin: 2.5rem 0.7rem;
+        transition: margin 0.2s ease-in;
+        color: $darker-text;
+        text-decoration: none;
+        position: relative;
+      }
+
+      & > a:last-child {
+        margin-right: 0;
+      }
+
+      & > a:nth-child(2) {
+        margin-left: auto;
+      }
+
+      @include underline_animation;
+    }
+    &.nav__stick {
+      box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.2);
+
+      & > div > a ~ a {
+        padding: 0.5em 0.7em;
+        margin: 0.8rem 0.7rem;
+      }
+
+      & > div > a:last-child {
+        margin-right: 0;
+      }
+
+      & > div > a:nth-child(2) {
+        margin-left: auto;
+      }
+    }
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  // ==== INTRO ====
+  & > section {
+    width: 85%;
     margin: 0 auto;
+    max-width: 2000px;
     display: flex;
     align-items: center;
-    width: 90%;
+    justify-content: center;
 
-    & > #site_logo:first-child::before {
-      content: none;
+    & > #front__text {
+      font-family: "Noto Sans Mono", monospace;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 5rem;
+
+      & > h3 {
+        margin: 1rem 0;
+        color: $light-text;
+        font-size: 1.3rem;
+      }
+      & > h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: -0.1rem;
+        margin-bottom: 0.5rem;
+        word-spacing: -1rem;
+        color: $link-highlight;
+      }
+      & > h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        color: $dark-text;
+        margin-bottom: 1.5rem;
+        word-spacing: -1rem;
+      }
+      & > p {
+        line-height: 1.5rem;
+      }
     }
-
-    & > #site_logo {
-      //specifikace pro logo stránky
+    & > #front__img {
+      width: 50%;
+      background-position: center center;
+      min-height: 700px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../images/backgrounds/figi.jpg");
     }
-
-    & > a:nth-child(2) {
-      margin-left: auto;
-    }
-
-    & > a ~ a {
-      text-align: center;
-      font-size: 1.3rem;
-      padding: 0.5em 0.7em;
-      margin: 1rem 0.7rem;
-      color: $darker-text;
-      text-decoration: none;
-      position: relative;
-    }
-
-    @include underline_animation;
   }
 }

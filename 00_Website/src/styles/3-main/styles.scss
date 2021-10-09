@@ -4,12 +4,25 @@
 @import "../2-modules/main";
 //Footer
 @import "../2-modules/footer";
+//Hide Scrollbar
+/* :root {
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  
+  font-family: "Noto Sans Display", sans-serif;
+} */
 //Header
 body > header {
   @include header;
 }
 //Main
 body > main {
+  height: 1200px;
+  background-color: red;
 }
 //Footer
 body > footer {

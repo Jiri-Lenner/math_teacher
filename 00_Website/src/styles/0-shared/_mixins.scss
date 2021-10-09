@@ -10,12 +10,12 @@
     display: inline-block;
     height: 0.125rem;
     background-color: $darker-text;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
   }
 
   & > a:hover::before {
     transform: scalex(1);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
     transform-origin: left bottom;
   }
 }

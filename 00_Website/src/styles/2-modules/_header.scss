@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   & > nav {
     width: 100%;
     font-family: "Noto Sans Display", sans-serif;
@@ -15,6 +16,7 @@
     background-color: #fff;
     position: fixed;
     top: 0px;
+    z-index: 100;
 
     & > div {
       margin: 0 auto;
@@ -118,6 +120,36 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url("../images/backgrounds/figi.jpg");
+    }
+    // ==== Page Number ====
+    & > #half__line__container {
+      position: absolute;
+      left: 2%;
+      top: 50%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2.4rem;
+      height: 50%;
+
+      #half__page__number {
+        font-family: "Noto Sans Mono", monospace;
+        background-color: white;
+        font-size: 1.6rem;
+        padding: 0.4rem;
+        transform: rotate(90deg);
+        color: $darker-text;
+        top: 0;
+        left: 0;
+        margin-top: -0.9rem;
+      }
+
+      #half__line {
+        width: 3px;
+        height: 100%;
+        background-color: $darker-text;
+      }
     }
   }
 }

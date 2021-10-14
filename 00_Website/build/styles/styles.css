@@ -315,6 +315,14 @@ body > header > nav > div > a ~ a {
   position: relative;
 }
 
+body > header > nav > div > a ~ a:active {
+  color: #ababab;
+}
+
+body > header > nav > div > a ~ a:active:before {
+  background-color: #ababab;
+}
+
 body > header > nav > div > a:last-child {
   margin-right: 0;
 }

@@ -42,6 +42,13 @@
         color: $darker-text;
         text-decoration: none;
         position: relative;
+
+        &:active {
+          color: $lighter-text;
+          &:before {
+            background-color: $lighter-text;
+          }
+        }
       }
 
       & > a:last-child {

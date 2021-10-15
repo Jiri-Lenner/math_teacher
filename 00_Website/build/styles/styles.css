@@ -441,7 +441,7 @@ body > header > section > #front__text > #front__container > a:hover {
 
 body > header > section > #front__text > #front__container::after {
   content: " ";
-  width: 85%;
+  width: 90%;
   height: 75%;
   position: absolute;
   right: 0;

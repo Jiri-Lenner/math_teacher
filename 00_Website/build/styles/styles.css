@@ -295,7 +295,7 @@ body > header > nav > div {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 80%;
   max-width: 2000px;
 }
 
@@ -368,7 +368,7 @@ body > header > nav.nav__stick > div > a:nth-child(2) {
 }
 
 body > header > section {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
   max-width: 2000px;
   display: flex;
@@ -380,7 +380,6 @@ body > header > section > #front__text {
   font-family: "Noto Sans Mono", monospace;
   width: 50%;
   box-sizing: border-box;
-  padding: 5rem;
 }
 
 body > header > section > #front__text > h3 {
@@ -458,7 +457,7 @@ body > header > section > #front__text > #front__container > a:active {
 
 body > header > section > #front__img {
   width: 50%;
-  background-position: center center;
+  background-position: right center;
   min-height: 700px;
   background-size: contain;
   background-repeat: no-repeat;

@@ -21,7 +21,7 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      width: 90%;
+      width: 80%;
       max-width: 2000px;
 
       & > #site__logo:first-child::before {
@@ -74,7 +74,7 @@
 
   // ==== INTRO ====
   & > section {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     max-width: 2000px;
     display: flex;
@@ -85,7 +85,6 @@
       font-family: "Noto Sans Mono", monospace;
       width: 50%;
       box-sizing: border-box;
-      padding: 5rem;
 
       & > h3 {
         margin: 1rem 0;
@@ -119,7 +118,7 @@
     }
     & > #front__img {
       width: 50%;
-      background-position: center center;
+      background-position: right center;
       min-height: 700px;
       background-size: contain;
       background-repeat: no-repeat;

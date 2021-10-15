@@ -272,7 +272,6 @@ body {
 }
 
 body > header {
-  width: 100%;
   height: 100vh;
   min-height: 500px;
   display: flex;
@@ -315,14 +314,6 @@ body > header > nav > div > a ~ a {
   position: relative;
 }
 
-body > header > nav > div > a ~ a:active {
-  color: #ababab;
-}
-
-body > header > nav > div > a ~ a:active:before {
-  background-color: #ababab;
-}
-
 body > header > nav > div > a:last-child {
   margin-right: 0;
 }
@@ -349,6 +340,14 @@ body > header > nav > div > a:hover::before {
   transform: scalex(1);
   transition: transform 0.2s ease-in;
   transform-origin: left bottom;
+}
+
+body > header > nav > div > a:active {
+  color: #ababab;
+}
+
+body > header > nav > div > a:active:before {
+  background-color: #ababab;
 }
 
 body > header > nav.nav__stick {
@@ -410,6 +409,51 @@ body > header > section > #front__text > h2 {
 
 body > header > section > #front__text > p {
   line-height: 1.5rem;
+}
+
+body > header > section > #front__text > #front__container {
+  font-size: 1rem;
+  margin: 2rem 0;
+  display: inline-block;
+  position: relative;
+}
+
+body > header > section > #front__text > #front__container > a {
+  z-index: 2;
+  padding: 1em 1.5em;
+  border: 2.5px solid #3d4246;
+  border-radius: 2px;
+  margin: 0 0.6em 0.6em 0;
+  text-decoration: none;
+  color: #3d4246;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 0.15s ease-in, top 0.15s ease-in;
+}
+
+body > header > section > #front__text > #front__container > a:hover {
+  left: 0.6em;
+  top: 0.6em;
+}
+
+body > header > section > #front__text > #front__container::after {
+  content: " ";
+  width: 85%;
+  height: 75%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: #3d4246 solid 2.5px;
+  border-bottom: #3d4246 solid 2.5px;
+  border-bottom-right-radius: 2px;
+}
+
+body > header > section > #front__text > #front__container > a:active {
+  color: #ababab;
+  border: #ababab solid 2.5px;
 }
 
 body > header > section > #front__img {

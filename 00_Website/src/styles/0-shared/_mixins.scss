@@ -18,4 +18,71 @@
     transition: transform 0.2s ease-in;
     transform-origin: left bottom;
   }
+
+  & > a:active {
+    color: $lighter-text;
+    &:before {
+      background-color: $lighter-text;
+    }
+  }
+}
+
+@mixin button {
+  // my legendary button (nighmare)
+  // ultimately i had redone this button like 20 time before i managed to make it responive to font size and the amout of text you put in
+  // i consider it masterpiece
+  //Here are some of the rules:
+
+  // These are the styles used for the div
+  font-size: 1rem;
+  margin: 2rem 0;
+  display: inline-block;
+  position: relative;
+
+  //Styles used for the button inside
+  & > a {
+    z-index: 2;
+
+    padding: 1em 1.5em;
+    border: 2.5px solid $darker-text;
+    border-radius: 2px;
+
+    // This margin is used to set the space between the line of the element (::after) and the a tag
+    margin: 0 0.6em 0.6em 0;
+
+    text-decoration: none;
+    color: $darker-text;
+    font-weight: 500;
+
+    // This is also extremely important as the a tag is inline element (hedeache alert!)
+    display: inline-block;
+    // Positioning => need to add the top and left otherwise the animation wont work
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 0.15s ease-in, top 0.15s ease-in;
+  }
+
+  & > a:hover {
+    left: 0.6em;
+    top: 0.6em;
+  }
+
+  //Styles used for the underline
+  &::after {
+    content: " ";
+    width: 85%;
+    height: 75%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-right: $darker-text solid 2.5px;
+    border-bottom: $darker-text solid 2.5px;
+    border-bottom-right-radius: 2px;
+  }
+  // Make it lighter when clicking
+  & > a:active {
+    color: $lighter-text;
+    border: $lighter-text solid 2.5px;
+  }
 }

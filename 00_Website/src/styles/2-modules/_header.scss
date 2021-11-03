@@ -2,157 +2,152 @@
 @import "../1-global/0-global", "../0-shared/0-shared";
 // ==== NAV ====
 @mixin header {
-  height: 100vh;
-  min-height: 500px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  & > nav {
-    width: 100%;
-    font-family: "Noto Sans Display", sans-serif;
-    box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0);
-    background-color: #fff;
-    position: fixed;
-    top: 0px;
-    z-index: 100;
-
-    & > div {
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      width: 80%;
-      max-width: 2000px;
-
-      & > #site__logo:first-child::before {
-        content: none;
-      }
-
-      & > #site__logo {
-        //specifikace pro logo stránky
-      }
-
-      & > a ~ a {
-        text-align: center;
-        font-size: 1.2rem;
-        padding: 0.5em 0.7em;
-        margin: 2.5rem 0.7rem;
-        transition: margin 0.2s ease-in;
-        color: $darker-text;
-        text-decoration: none;
-        position: relative;
-      }
-
-      & > a:last-child {
-        margin-right: 0;
-      }
-
-      & > a:nth-child(2) {
-        margin-left: auto;
-      }
-
-      @include underline_animation;
-    }
-    &.nav__stick {
-      box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.2);
-
-      & > div > a ~ a {
-        padding: 0.5em 0.7em;
-        margin: 0.8rem 0.7rem;
-      }
-
-      & > div > a:last-child {
-        margin-right: 0;
-      }
-
-      & > div > a:nth-child(2) {
-        margin-left: auto;
-      }
-    }
-    transition: box-shadow 0.2s ease-in;
-  }
-
-  // ==== INTRO ====
-  & > section {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 2000px;
+    height: 100vh;
     display: flex;
+    min-height: 1000px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    position: relative;
 
-    & > #front__text {
-      font-family: "Noto Sans Mono", monospace;
-      width: 50%;
-      box-sizing: border-box;
-
-      & > h3 {
-        margin: 1rem 0;
-        color: $light-text;
-        font-size: 1.3rem;
-      }
-      & > h1 {
-        font-size: 3rem;
-        font-weight: 900;
-        letter-spacing: -0.1rem;
-        margin-bottom: 0.5rem;
-        word-spacing: -1rem;
-        color: $link-highlight;
-      }
-      & > h2 {
-        font-size: 3rem;
-        font-weight: 900;
-        letter-spacing: -1px;
-        color: $dark-text;
-        margin-bottom: 1.5rem;
-        word-spacing: -1rem;
-      }
-      & > p {
-        line-height: 1.5rem;
-      }
-
-      //Button
-      & > #front__container {
-        @include button;
-      }
-    }
-    & > #front__img {
-      width: 50%;
-      background-position: right center;
-      min-height: 700px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url("../images/backgrounds/figi.jpg");
-    }
     // ==== Page Number ====
     & > #half__line__container {
-      position: absolute;
-      left: 2%;
-      top: 50%;
+        position: absolute;
+        left: -8rem;
+        top: 40%;
+        margin-left: 10%;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 2.4rem;
-      height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 2.4rem;
+        height: 60%;
 
-      #half__page__number {
-        font-family: "Noto Sans Mono", monospace;
-        background-color: white;
-        font-size: 1.6rem;
-        padding: 0.4rem;
-        transform: rotate(90deg);
-        color: $darker-text;
-        top: 0;
-        left: 0;
-        margin-top: -0.9rem;
-      }
+        #half__page__number {
+            font-family: "Noto Sans Mono", monospace;
+            background-color: white;
+            font-size: 1.6rem;
+            padding: 0.4rem;
+            transform: rotate(90deg);
+            color: $darker-text;
+            top: 0;
+            left: 0;
+            margin-top: -0.9rem;
+        }
 
-      #half__line {
-        width: 3px;
-        height: 100%;
-        background-color: $darker-text;
-      }
+        #half__line {
+            width: 3px;
+            height: 100%;
+            background-color: $darker-text;
+        }
     }
-  }
+
+    & > nav {
+        width: 100%;
+        font-family: "Noto Sans Display", sans-serif;
+        box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0);
+        background-color: #fff;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+
+        & > div {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            max-width: 2000px;
+
+            & > #site__logo:first-child::before {
+                content: none;
+            }
+
+            & > #site__logo {
+                //specifikace pro logo stránky
+            }
+
+            & > a ~ a {
+                text-align: center;
+                font-size: 1.2rem;
+                padding: 0.5em 0.7em;
+                margin: 2.5rem 0.7rem;
+                transition: margin 0.2s ease-in;
+                color: $darker-text;
+                text-decoration: none;
+                position: relative;
+            }
+
+            & > a:last-child {
+                margin-right: 0;
+            }
+
+            & > a:nth-child(2) {
+                margin-left: auto;
+            }
+
+            @include underline_animation;
+        }
+        &.nav__stick {
+            box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0.2);
+
+            & > div > a ~ a {
+                padding: 0.5em 0.7em;
+                margin: 0.8rem 0.7rem;
+            }
+
+            & > div > a:last-child {
+                margin-right: 0;
+            }
+
+            & > div > a:nth-child(2) {
+                margin-left: auto;
+            }
+        }
+        transition: box-shadow 0.2s ease-in;
+    }
+
+    // ==== INTRO ====
+    & > section {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 2000px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        & > #front__text {
+            font-family: "Noto Sans Mono", monospace;
+            width: 50%;
+            box-sizing: border-box;
+
+            & > h3 {
+                margin: 1rem 0;
+                color: $light-text;
+                font-size: 1.4rem;
+            }
+            & > h1 {
+                font-size: 3rem;
+                font-weight: 900;
+                margin-bottom: 0.5rem;
+                word-spacing: -0.8rem;
+                color: $link-highlight;
+            }
+            & > h2 {
+                @include title;
+            }
+            & > p {
+                line-height: 1.8rem;
+                font-size: 1.2rem;
+            }
+
+            //Button
+            & > #front__container {
+                @include button;
+            }
+        }
+        & > #front__img {
+            max-width: 50%;
+            max-height: 700px;
+        }
+    }
 }

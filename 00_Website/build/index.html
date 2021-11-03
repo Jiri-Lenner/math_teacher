@@ -24,6 +24,11 @@
 
 <body>
     <header>
+        <!--Start of the line-->
+        <div id="half__line__container">
+            <p id="half__page__number">00001</p>
+            <div id="half__line"></div>
+        </div>
         <nav>
             <div id="nav__container">
                 <a id="site__logo" href="">
@@ -37,16 +42,12 @@
             </div>
         </nav>
         <section class="intro__container">
-            <!--Start of the line-->
-            <div id="half__line__container">
-                <p id="half__page__number">00001</p>
-                <div id="half__line"></div>
-            </div>
+
             <!--The page-->
             <div id="front__text">
                 <h3>Zdravím, jmenuji se</h3>
-                <h1>Petr Flajžík</h1>
-                <h2>Jsem vedoucí tiskárny</h2>
+                <h1># Petr Flajžík</h1>
+                <h2>## Jsem vedoucí tiskárny</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique possimus nam dolore nulla
                     consectetur obcaecati. Sunt, odio. Deleniti, cum ullam.</p>
                 <div id="front__container">
@@ -56,18 +57,49 @@
                 </div>
             </div>
 
-            <div id="front__img">
-
-            </div>
+            <img id="front__img" src="./images/backgrounds/figi.jpg" alt="">
         </section>
     </header>
     <main>
-        <div id="main__container">
-            <section class="main__container__section">
+        <div class="main__container">
+            <section class="container__aboutMe">
+                <div class="lineContainer">
+                    <p class="lineContainer--pageNumber">00002</p>
+                    <div class="lineContainer--line"></div>
+                </div>
+                <img src="./images/backgrounds/figi2.jpg" alt="" class="aboutMe__img">
+                <div class="aboutMe__text">
+                    <h2>## O Mně</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores consequuntur quo eaque at
+                        consectetur iure ex est omnis pariatur quibusdam! Nostrum sint consequatur excepturi voluptates
+                        maxime repudiandae ratione quod pariatur quibusdam ullam, ipsam nobis sit autem impedit. Neque
+                        quae corporis nulla atque qui, harum velit, illo quisquam cum odio assumenda explicabo excepturi
+                        minima in, sed saepe! Vitae.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quia aperiam illum culpa voluptas,
+                        impedit tempore aut quae! Blanditiis recusandae provident, hic deserunt qui enim cupiditate
+                        dolores aliquid aut itaque alias tempora nobis? Veniam, nisi. Vitae necessitatibus aliquid quae,
+                    </p>
+                    <p>
+                        velit dignissimos debitis consequatur? Architecto quisquam natus aspernatur earum incidunt
+                        facilis numquam, eum vel quia similique porro quis voluptate autem doloribus perferendis
+                        corporis dignissimos fugiat illum doloremque! Corrupti reprehenderit perspiciatis aperiam eos
+                    </p>
+                </div>
 
             </section>
-            <section class="main__container__section">
-
+            <section class="container__video">
+                <div class="lineContainer">
+                    <p class="lineContainer--pageNumber">00003</p>
+                    <div class="lineContainer--line"></div>
+                </div>
+                <h2>## Pust jsi mě!</h2>
+                <video controls>
+                    <!--mp4-->
+                    <source src="./videos/intro.mp4" type="video/webm">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
             </section>
             <section>
 

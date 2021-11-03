@@ -2,4 +2,66 @@
 @import "../1-global/0-global", "../0-shared/0-shared";
 
 @mixin main {
+    display: flex;
+    justify-content: center;
+    //first section
+
+    .main__container {
+        width: 80%;
+        margin: 0 auto;
+
+        .container__aboutMe {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 5rem;
+
+            .aboutMe__text {
+                max-width: 50%;
+                font-family: "Noto Sans Mono", monospace;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                > h2 {
+                    @include title;
+                }
+                > p {
+                    line-height: 1.8rem;
+                    font-size: 1.2rem;
+                    margin-bottom: 1.5rem;
+                    text-align: justify;
+                }
+            }
+
+            .aboutMe__img {
+                max-width: 50%;
+                max-height: 700px;
+            }
+
+            @include sideLine(-5rem, 0rem) {
+                top: 15rem;
+            }
+        }
+        .container__video {
+            width: 100%;
+            margin-top: 20rem;
+            font-family: "Noto Sans Mono", monospace;
+            position: relative;
+
+            @include sideLine(-15rem, 0rem) {
+                top: 30rem;
+            }
+
+            > h2 {
+                @include title {
+                    margin-bottom: 4rem;
+                }
+            }
+
+            > video {
+                width: 100%;
+            }
+        }
+    }
 }

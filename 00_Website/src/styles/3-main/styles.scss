@@ -4,13 +4,14 @@
 @import "../2-modules/main";
 //Footer
 @import "../2-modules/footer";
+
 //Hide Scrollbar
 :root {
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: none; */
 }
 body {
   font-family: "Noto Sans Display", sans-serif;
@@ -23,8 +24,7 @@ body > header {
 }
 //Main
 body > main {
-  height: 1200px;
-  background-color: red;
+  @include main;
 }
 //Footer
 body > footer {

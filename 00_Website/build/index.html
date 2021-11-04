@@ -19,6 +19,9 @@
         font-family: 'Noto Sans Display', sans-serif;
         font-family: 'Noto Sans Mono', monospace;
     -->
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 </head>
 
@@ -44,7 +47,7 @@
         <section class="intro__container">
 
             <!--The page-->
-            <div id="front__text">
+            <div data-aos="fade-right" id="front__text">
                 <h3>Zdravím, jmenuji se</h3>
                 <h1># Petr Flajžík</h1>
                 <h2>## Jsem vedoucí tiskárny</h2>
@@ -57,7 +60,7 @@
                 </div>
             </div>
 
-            <img id="front__img" src="./images/backgrounds/figi.jpg" alt="">
+            <img data-aos="fade-left" data-aos-delay="300" id="front__img" src="./images/backgrounds/figi.jpg" alt="">
         </section>
     </header>
     <main>
@@ -67,8 +70,9 @@
                     <p class="lineContainer--pageNumber">00002</p>
                     <div class="lineContainer--line"></div>
                 </div>
-                <img src="./images/backgrounds/figi2.jpg" alt="" class="aboutMe__img">
-                <div class="aboutMe__text">
+                <img data-aos="fade-right" data-aos-delay="300" src="./images/backgrounds/figi2.jpg" alt=""
+                    class="aboutMe__img">
+                <div data-aos="fade-left" class="aboutMe__text">
                     <h2>## O Mně</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores consequuntur quo eaque at
                         consectetur iure ex est omnis pariatur quibusdam! Nostrum sint consequatur excepturi voluptates
@@ -94,8 +98,8 @@
                     <p class="lineContainer--pageNumber">00003</p>
                     <div class="lineContainer--line"></div>
                 </div>
-                <h2>## Pust jsi mě!</h2>
-                <video controls>
+                <h2 data-aos="fade-left">## Pust jsi mě!</h2>
+                <video data-aos="fade-left" data-aos-delay="200" controls>
                     <!--mp4-->
                     <source src="./videos/intro.mp4" type="video/webm">
                     Sorry, your browser doesn't support embedded videos.
@@ -110,6 +114,10 @@
 
     </footer>
     <script src="./scripts/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

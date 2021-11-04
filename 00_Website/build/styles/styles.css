@@ -346,6 +346,7 @@ body > header > nav > div > a ~ a {
 
 body > header > nav > div > a:last-child {
   margin-right: 0;
+  padding-right: 0;
 }
 
 body > header > nav > div > a:nth-child(2) {
@@ -391,6 +392,7 @@ body > header > nav.nav__stick > div > a ~ a {
 
 body > header > nav.nav__stick > div > a:last-child {
   margin-right: 0;
+  padding-right: 0;
 }
 
 body > header > nav.nav__stick > div > a:nth-child(2) {

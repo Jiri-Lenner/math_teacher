@@ -45,14 +45,14 @@
 
         padding: 1em 1.5em;
         border: 2.5px solid $darker-text;
-        border-radius: 2px;
+        border-radius: 3px;
 
         // This margin is used to set the space between the line of the element (::after) and the a tag
         margin: 0 0.6em 0.6em 0;
 
         text-decoration: none;
         color: $darker-text;
-        font-weight: 500;
+        font-weight: 600;
 
         // This is also extremely important as the a tag is inline element (hedeache alert!)
         display: inline-block;
@@ -78,7 +78,7 @@
         bottom: 0;
         border-right: $darker-text solid 2.5px;
         border-bottom: $darker-text solid 2.5px;
-        border-bottom-right-radius: 2px;
+        border-bottom-right-radius: 3px;
     }
     // Make it lighter when clicking
     & > a:active {

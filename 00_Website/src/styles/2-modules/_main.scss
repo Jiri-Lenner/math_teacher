@@ -8,15 +8,14 @@
 
     .main__container {
         width: 80%;
+        max-width: 1500px;
         margin: 0 auto;
 
         .container__aboutMe {
-            width: 100%;
             display: flex;
             justify-content: space-between;
             position: relative;
             top: 5rem;
-
             .aboutMe__text {
                 max-width: 50%;
                 font-family: "Noto Sans Mono", monospace;

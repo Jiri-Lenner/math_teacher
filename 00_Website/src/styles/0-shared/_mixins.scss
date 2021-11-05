@@ -88,6 +88,9 @@
 }
 
 @mixin sideLine($upper: 0rem, $lower: 0rem) {
+    & {
+        position: relative;
+    }
     & > .lineContainer {
         position: absolute;
         left: -8rem;
@@ -120,6 +123,7 @@
 }
 
 @mixin title {
+    font-family: "Noto Sans Mono", monospace;
     font-size: 3rem;
     font-weight: 900;
     color: $dark-text;

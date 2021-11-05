@@ -7,24 +7,28 @@
 
 //Hide Scrollbar
 :root {
-  /* ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none;
   scrollbar-width: none; */
+    scroll-behavior: smooth;
 }
 body {
-  font-family: "Noto Sans Display", sans-serif;
+    font-family: "Noto Sans Display", sans-serif;
+    ::selection {
+        background-color: #5959594f;
+    }
 }
 
 //Header
 body > header {
-  @include header;
-  position: relative;
+    @include header;
+    position: relative;
 }
 //Main
 body > main {
-  @include main;
+    @include main;
 }
 //Footer
 body > footer {

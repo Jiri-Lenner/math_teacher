@@ -30,7 +30,10 @@
             }
 
             & > #site__logo {
-                //specifikace pro logo stránky
+                > img {
+                    height: 5rem;
+                    transition: height 0.2s ease-in;
+                }
             }
 
             & > a ~ a {
@@ -71,8 +74,15 @@
             & > div > a:nth-child(2) {
                 margin-left: auto;
             }
+
+            & > div > #site__logo {
+                > img {
+                    height: 3.5rem;
+                    transition: height 0.2s ease-in;
+                }
+            }
         }
-        transition: box-shadow 0.2s ease-in;
+        transition: top 0.2s ease-in;
     }
 
     // ==== INTRO ====

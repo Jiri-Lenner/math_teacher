@@ -309,7 +309,7 @@ body > header > nav > div > #site__logo:first-child::before {
 }
 
 body > header > nav > div > #site__logo > img {
-  height: 5rem;
+  height: 4rem;
   transition: height 0.2s ease-in;
 }
 
@@ -397,7 +397,7 @@ body > header > section {
 body > header > section > #half__line__container {
   position: absolute;
   left: -8rem;
-  top: 10vh;
+  top: 35%;
   bottom: -50vh;
   display: flex;
   flex-direction: column;
@@ -466,6 +466,7 @@ body > header > section > #front__text > #front__container {
 
 body > header > section > #front__text > #front__container > a {
   z-index: 2;
+  font-family: "Noto Sans Mono", monospace;
   padding: 1em 1.5em;
   border: 2.5px solid #3d4246;
   border-radius: 3px;
@@ -522,13 +523,13 @@ body > main .main__container .container__aboutMe {
   padding-top: 8rem;
   display: flex;
   justify-content: space-between;
+  gap: 10%;
 }
 
 body > main .main__container .container__aboutMe .aboutMe__text {
   max-width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 body > main .main__container .container__aboutMe .aboutMe__text > h2 {
@@ -550,7 +551,8 @@ body > main .main__container .container__aboutMe .aboutMe__text > p {
 
 body > main .main__container .container__aboutMe .aboutMe__img {
   max-width: 50%;
-  max-height: 700px;
+  max-height: 50rem;
+  object-fit: cover;
 }
 
 body > main .main__container .container__aboutMe {
@@ -616,7 +618,7 @@ body > main .main__container .container__video > .lineContainer .lineContainer--
   color: #3d4246;
   top: 15rem;
   position: absolute;
-  top: 30rem;
+  top: 15rem;
 }
 
 body > main .main__container .container__video > .lineContainer .lineContainer--line {
@@ -673,7 +675,7 @@ body > main .main__container .container__services > .lineContainer .lineContaine
   color: #3d4246;
   top: 15rem;
   position: absolute;
-  top: 30rem;
+  top: 15rem;
 }
 
 body > main .main__container .container__services > .lineContainer .lineContainer--line {
@@ -701,7 +703,7 @@ body > main .main__container .container__services .services--text > h3 {
   font-family: "Noto Sans Mono", monospace;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #595959;
+  color: #3d4246;
   margin-bottom: 2rem;
   word-spacing: -0.8rem;
 }
@@ -728,6 +730,7 @@ body > main .main__container .container__services .services--text > div {
 
 body > main .main__container .container__services .services--text > div > a {
   z-index: 2;
+  font-family: "Noto Sans Mono", monospace;
   padding: 1em 1.5em;
   border: 2.5px solid #3d4246;
   border-radius: 3px;
@@ -773,4 +776,146 @@ body > main .main__container .container__services .services--text > h4 {
   opacity: 0.2;
   top: -1.55rem;
   left: -3rem;
+}
+
+body > main .main__container .container__serviceArticles {
+  margin-top: 15rem;
+}
+
+body > main .main__container .container__serviceArticles > h2 {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #595959;
+  margin-bottom: 1.5rem;
+  word-spacing: -0.8rem;
+}
+
+body > main .main__container .container__serviceArticles {
+  position: relative;
+}
+
+body > main .main__container .container__serviceArticles > .lineContainer {
+  position: absolute;
+  left: -8rem;
+  top: -15rem;
+  bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2.4rem;
+}
+
+body > main .main__container .container__serviceArticles > .lineContainer .lineContainer--pageNumber {
+  font-family: "Noto Sans Mono", monospace;
+  background-color: white;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+  transform: rotate(90deg);
+  color: #3d4246;
+  top: 15rem;
+  position: absolute;
+  top: 15rem;
+}
+
+body > main .main__container .container__serviceArticles > .lineContainer .lineContainer--line {
+  width: 3px;
+  height: 100%;
+  background-color: #3d4246;
+}
+
+body > main .main__container .container__serviceArticles > article {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+body > main .main__container .container__serviceArticles > article img {
+  min-height: 25rem;
+  max-width: 50%;
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+body > main .main__container .container__serviceArticles > article div {
+  max-width: 50%;
+  flex-grow: 1;
+}
+
+body > main .main__container .container__serviceArticles > article div > h3 {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3d4246;
+  margin-bottom: 2rem;
+  word-spacing: -0.8rem;
+}
+
+body > main .main__container .container__serviceArticles > article div > p {
+  font-family: "Noto Sans Mono", monospace;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  position: relative;
+  margin-left: 2rem;
+}
+
+body > main .main__container .container__serviceArticles > article div > p::before {
+  content: "-";
+  position: absolute;
+  font-size: 1.5rem;
+  left: -2rem;
+  top: 0rem;
+}
+
+body > main .main__container .container__serviceArticles > article div > div {
+  font-size: 1rem;
+  margin: 2rem 0;
+  display: inline-block;
+  position: relative;
+}
+
+body > main .main__container .container__serviceArticles > article div > div > a {
+  z-index: 2;
+  font-family: "Noto Sans Mono", monospace;
+  padding: 1em 1.5em;
+  border: 2.5px solid #3d4246;
+  border-radius: 3px;
+  margin: 0 0.6em 0.6em 0;
+  text-decoration: none;
+  color: #3d4246;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 0.15s ease-in, top 0.15s ease-in;
+}
+
+body > main .main__container .container__serviceArticles > article div > div > a:hover {
+  left: 0.6em;
+  top: 0.6em;
+}
+
+body > main .main__container .container__serviceArticles > article div > div::after {
+  content: " ";
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: #3d4246 solid 2.5px;
+  border-bottom: #3d4246 solid 2.5px;
+  border-bottom-right-radius: 3px;
+}
+
+body > main .main__container .container__serviceArticles > article div > div > a:active {
+  color: #ababab;
+  border: #ababab solid 2.5px;
+}
+
+body > main .main__container .container__serviceArticles > article ~ article {
+  margin-top: 3rem;
 }

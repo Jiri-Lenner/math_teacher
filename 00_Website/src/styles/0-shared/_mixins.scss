@@ -42,6 +42,7 @@
     //Styles used for the button inside
     & > a {
         z-index: 2;
+        font-family: "Noto Sans Mono", monospace;
 
         padding: 1em 1.5em;
         border: 2.5px solid $darker-text;
@@ -129,5 +130,25 @@
     color: $dark-text;
     margin-bottom: 1.5rem;
     word-spacing: -0.8rem;
+    @content;
+}
+
+@mixin lowerTitle {
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $darker-text;
+    margin-bottom: 2rem;
+    word-spacing: -0.8rem;
+    @content;
+}
+
+@mixin regularText {
+    font-family: "Noto Sans Mono", monospace;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+
     @content;
 }

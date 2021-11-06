@@ -31,7 +31,7 @@
 
             & > #site__logo {
                 > img {
-                    height: 5rem;
+                    height: 4rem;
                     transition: height 0.2s ease-in;
                 }
             }
@@ -99,7 +99,7 @@
         & > #half__line__container {
             position: absolute;
             left: -8rem;
-            top: 10vh;
+            top: 35%;
             bottom: -50vh;
             display: flex;
             flex-direction: column;

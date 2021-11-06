@@ -15,11 +15,12 @@
             padding-top: 8rem;
             display: flex;
             justify-content: space-between;
+            gap: 10%;
+
             .aboutMe__text {
                 max-width: 50%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 > h2 {
                     @include title;
                 }
@@ -34,7 +35,8 @@
 
             .aboutMe__img {
                 max-width: 50%;
-                max-height: 700px;
+                max-height: 50rem;
+                object-fit: cover;
             }
 
             @include sideLine(-5rem, 0rem) {
@@ -46,7 +48,7 @@
             margin-top: 7rem;
             padding-top: 8rem;
             @include sideLine(-7rem, 0rem) {
-                top: 30rem;
+                top: 15rem;
             }
 
             > h2 {
@@ -63,7 +65,7 @@
             margin-top: 7rem;
             padding-top: 8rem;
             @include sideLine(-7rem, 0rem) {
-                top: 30rem;
+                top: 15rem;
             }
 
             display: grid;
@@ -81,12 +83,7 @@
                 position: relative;
                 width: auto;
                 > h3 {
-                    font-family: "Noto Sans Mono", monospace;
-                    font-size: 2.5rem;
-                    font-weight: 700;
-                    color: $dark-text;
-                    margin-bottom: 2rem;
-                    word-spacing: -0.8rem;
+                    @include lowerTitle;
                 }
 
                 > ul {
@@ -116,6 +113,55 @@
                     top: -1.55rem;
                     left: -3rem;
                 }
+            }
+        }
+        .container__serviceArticles {
+            margin-top: 15rem;
+
+            > h2 {
+                @include title;
+            }
+
+            @include sideLine(-15rem, 0rem) {
+                top: 15rem;
+            }
+
+            > article {
+                padding-top: 8rem;
+                display: flex;
+                justify-content: space-between;
+                gap: 10%;
+                img {
+                    min-height: 25rem;
+                    max-width: 50%;
+                    object-fit: cover;
+                    flex-grow: 1;
+                }
+                div {
+                    max-width: 50%;
+                    flex-grow: 1;
+                    > h3 {
+                        @include lowerTitle;
+                    }
+                    > p {
+                        @include regularText;
+                        position: relative;
+                        margin-left: 2rem;
+                    }
+                    > p::before {
+                        content: "-";
+                        position: absolute;
+                        font-size: 1.5rem;
+                        left: -2rem;
+                        top: 0rem;
+                    }
+                    > div {
+                        @include button;
+                    }
+                }
+            }
+            > article ~ article {
+                margin-top: 3rem;
             }
         }
     }

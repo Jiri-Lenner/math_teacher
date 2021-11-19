@@ -287,7 +287,7 @@ body > header {
 
 body > header > nav {
   width: 100%;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: 'Noto Sans Display', sans-serif;
   box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0);
   background-color: #fff;
   position: fixed;
@@ -334,7 +334,7 @@ body > header > nav > div > a:nth-child(2) {
 }
 
 body > header > nav > div > a::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   left: 0;
   width: 100%;
@@ -406,7 +406,7 @@ body > header > section > #half__line__container {
 }
 
 body > header > section > #half__line__container #half__page__number {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   background-color: white;
   font-size: 1.6rem;
   padding: 0.4rem;
@@ -424,7 +424,7 @@ body > header > section > #half__line__container #half__line {
 }
 
 body > header > section > #front__text {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   width: 50%;
   box-sizing: border-box;
 }
@@ -444,7 +444,7 @@ body > header > section > #front__text > h1 {
 }
 
 body > header > section > #front__text > h2 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 3rem;
   font-weight: 900;
   color: #595959;
@@ -466,7 +466,7 @@ body > header > section > #front__text > #front__container {
 
 body > header > section > #front__text > #front__container > a {
   z-index: 2;
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   padding: 1em 1.5em;
   border: 2.5px solid #3d4246;
   border-radius: 3px;
@@ -481,13 +481,13 @@ body > header > section > #front__text > #front__container > a {
   transition: left 0.15s ease-in, top 0.15s ease-in;
 }
 
-body > header > section > #front__text > #front__container > a:hover {
+body > header > section > #front__text > #front__container:hover > a {
   left: 0.6em;
   top: 0.6em;
 }
 
 body > header > section > #front__text > #front__container::after {
-  content: " ";
+  content: ' ';
   width: 90%;
   height: 75%;
   position: absolute;
@@ -533,7 +533,7 @@ body > main .main__container .container__aboutMe .aboutMe__text {
 }
 
 body > main .main__container .container__aboutMe .aboutMe__text > h2 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 3rem;
   font-weight: 900;
   color: #595959;
@@ -542,7 +542,7 @@ body > main .main__container .container__aboutMe .aboutMe__text > h2 {
 }
 
 body > main .main__container .container__aboutMe .aboutMe__text > p {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   line-height: 1.8rem;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
@@ -571,7 +571,7 @@ body > main .main__container .container__aboutMe > .lineContainer {
 }
 
 body > main .main__container .container__aboutMe > .lineContainer .lineContainer--pageNumber {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   background-color: white;
   font-size: 1.6rem;
   padding: 0.4rem;
@@ -610,7 +610,7 @@ body > main .main__container .container__video > .lineContainer {
 }
 
 body > main .main__container .container__video > .lineContainer .lineContainer--pageNumber {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   background-color: white;
   font-size: 1.6rem;
   padding: 0.4rem;
@@ -628,7 +628,7 @@ body > main .main__container .container__video > .lineContainer .lineContainer--
 }
 
 body > main .main__container .container__video > h2 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 3rem;
   font-weight: 900;
   color: #595959;
@@ -667,7 +667,7 @@ body > main .main__container .container__services > .lineContainer {
 }
 
 body > main .main__container .container__services > .lineContainer .lineContainer--pageNumber {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   background-color: white;
   font-size: 1.6rem;
   padding: 0.4rem;
@@ -686,7 +686,7 @@ body > main .main__container .container__services > .lineContainer .lineContaine
 
 body > main .main__container .container__services > h2 {
   grid-column: 1/4;
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 3rem;
   font-weight: 900;
   color: #595959;
@@ -700,7 +700,7 @@ body > main .main__container .container__services .services--text {
 }
 
 body > main .main__container .container__services .services--text > h3 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 2.5rem;
   font-weight: 700;
   color: #3d4246;
@@ -713,7 +713,7 @@ body > main .main__container .container__services .services--text > ul {
 }
 
 body > main .main__container .container__services .services--text > ul li {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   line-height: 1.8rem;
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
@@ -730,7 +730,7 @@ body > main .main__container .container__services .services--text > div {
 
 body > main .main__container .container__services .services--text > div > a {
   z-index: 2;
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   padding: 1em 1.5em;
   border: 2.5px solid #3d4246;
   border-radius: 3px;
@@ -745,13 +745,13 @@ body > main .main__container .container__services .services--text > div > a {
   transition: left 0.15s ease-in, top 0.15s ease-in;
 }
 
-body > main .main__container .container__services .services--text > div > a:hover {
+body > main .main__container .container__services .services--text > div:hover > a {
   left: 0.6em;
   top: 0.6em;
 }
 
 body > main .main__container .container__services .services--text > div::after {
-  content: " ";
+  content: ' ';
   width: 90%;
   height: 75%;
   position: absolute;
@@ -768,7 +768,7 @@ body > main .main__container .container__services .services--text > div > a:acti
 }
 
 body > main .main__container .container__services .services--text > h4 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   position: absolute;
   z-index: -1;
   font-size: 5.5rem;
@@ -783,7 +783,7 @@ body > main .main__container .container__serviceArticles {
 }
 
 body > main .main__container .container__serviceArticles > h2 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 3rem;
   font-weight: 900;
   color: #595959;
@@ -807,7 +807,7 @@ body > main .main__container .container__serviceArticles > .lineContainer {
 }
 
 body > main .main__container .container__serviceArticles > .lineContainer .lineContainer--pageNumber {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   background-color: white;
   font-size: 1.6rem;
   padding: 0.4rem;
@@ -844,7 +844,7 @@ body > main .main__container .container__serviceArticles > article div {
 }
 
 body > main .main__container .container__serviceArticles > article div > h3 {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   font-size: 2.5rem;
   font-weight: 700;
   color: #3d4246;
@@ -853,7 +853,7 @@ body > main .main__container .container__serviceArticles > article div > h3 {
 }
 
 body > main .main__container .container__serviceArticles > article div > p {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   line-height: 1.8rem;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
@@ -863,7 +863,7 @@ body > main .main__container .container__serviceArticles > article div > p {
 }
 
 body > main .main__container .container__serviceArticles > article div > p::before {
-  content: "-";
+  content: '-';
   position: absolute;
   font-size: 1.5rem;
   left: -2rem;
@@ -879,7 +879,7 @@ body > main .main__container .container__serviceArticles > article div > div {
 
 body > main .main__container .container__serviceArticles > article div > div > a {
   z-index: 2;
-  font-family: "Noto Sans Mono", monospace;
+  font-family: 'Noto Sans Mono', monospace;
   padding: 1em 1.5em;
   border: 2.5px solid #3d4246;
   border-radius: 3px;
@@ -894,13 +894,13 @@ body > main .main__container .container__serviceArticles > article div > div > a
   transition: left 0.15s ease-in, top 0.15s ease-in;
 }
 
-body > main .main__container .container__serviceArticles > article div > div > a:hover {
+body > main .main__container .container__serviceArticles > article div > div:hover > a {
   left: 0.6em;
   top: 0.6em;
 }
 
 body > main .main__container .container__serviceArticles > article div > div::after {
-  content: " ";
+  content: ' ';
   width: 90%;
   height: 75%;
   position: absolute;

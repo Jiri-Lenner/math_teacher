@@ -1,5 +1,5 @@
 //Global Styles
-@import "../1-global/0-global", "../0-shared/0-shared";
+@import '../1-global/0-global', '../0-shared/0-shared';
 // ==== NAV ====
 @mixin header {
     height: 100vh;
@@ -11,7 +11,7 @@
 
     & > nav {
         width: 100%;
-        font-family: "Noto Sans Display", sans-serif;
+        font-family: 'Noto Sans Display', sans-serif;
         box-shadow: 0px 0px 5px 0.1px rgba(0, 0, 0, 0);
         background-color: #fff;
         position: fixed;
@@ -107,7 +107,7 @@
             width: 2.4rem;
 
             #half__page__number {
-                font-family: "Noto Sans Mono", monospace;
+                font-family: 'Noto Sans Mono', monospace;
                 background-color: white;
                 font-size: 1.6rem;
                 padding: 0.4rem;
@@ -126,7 +126,7 @@
         }
 
         & > #front__text {
-            font-family: "Noto Sans Mono", monospace;
+            font-family: 'Noto Sans Mono', monospace;
             width: 50%;
             box-sizing: border-box;
 

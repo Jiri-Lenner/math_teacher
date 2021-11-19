@@ -1,6 +1,6 @@
 @mixin underline_animation {
     & > a::before {
-        content: " ";
+        content: ' ';
         position: absolute;
         left: 0;
         width: 100%;
@@ -42,7 +42,7 @@
     //Styles used for the button inside
     & > a {
         z-index: 2;
-        font-family: "Noto Sans Mono", monospace;
+        font-family: 'Noto Sans Mono', monospace;
 
         padding: 1em 1.5em;
         border: 2.5px solid $darker-text;
@@ -64,14 +64,16 @@
         transition: left 0.15s ease-in, top 0.15s ease-in;
     }
 
-    & > a:hover {
-        left: 0.6em;
-        top: 0.6em;
+    &:hover {
+        > a {
+            left: 0.6em;
+            top: 0.6em;
+        }
     }
 
     //Styles used for the underline
     &::after {
-        content: " ";
+        content: ' ';
         width: 90%;
         height: 75%;
         position: absolute;
@@ -104,7 +106,7 @@
         width: 2.4rem;
 
         .lineContainer--pageNumber {
-            font-family: "Noto Sans Mono", monospace;
+            font-family: 'Noto Sans Mono', monospace;
             background-color: white;
             font-size: 1.6rem;
             padding: 0.4rem;
@@ -124,7 +126,7 @@
 }
 
 @mixin title {
-    font-family: "Noto Sans Mono", monospace;
+    font-family: 'Noto Sans Mono', monospace;
     font-size: 3rem;
     font-weight: 900;
     color: $dark-text;
@@ -134,7 +136,7 @@
 }
 
 @mixin lowerTitle {
-    font-family: "Noto Sans Mono", monospace;
+    font-family: 'Noto Sans Mono', monospace;
     font-size: 2.5rem;
     font-weight: 700;
     color: $darker-text;
@@ -144,7 +146,7 @@
 }
 
 @mixin regularText {
-    font-family: "Noto Sans Mono", monospace;
+    font-family: 'Noto Sans Mono', monospace;
     line-height: 1.8rem;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;

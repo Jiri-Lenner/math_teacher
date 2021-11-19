@@ -1,5 +1,5 @@
 //Global Styles
-@import "../1-global/0-global", "../0-shared/0-shared";
+@import '../1-global/0-global', '../0-shared/0-shared';
 
 @mixin main {
     display: flex;
@@ -25,7 +25,7 @@
                     @include title;
                 }
                 > p {
-                    font-family: "Noto Sans Mono", monospace;
+                    font-family: 'Noto Sans Mono', monospace;
                     line-height: 1.8rem;
                     font-size: 1.2rem;
                     margin-bottom: 1.5rem;
@@ -89,7 +89,7 @@
                 > ul {
                     margin-left: 1rem;
                     li {
-                        font-family: "Noto Sans Mono", monospace;
+                        font-family: 'Noto Sans Mono', monospace;
                         line-height: 1.8rem;
                         font-size: 1.2rem;
                         margin-bottom: 0.8rem;
@@ -103,7 +103,7 @@
                 }
 
                 > h4 {
-                    font-family: "Noto Sans Mono", monospace;
+                    font-family: 'Noto Sans Mono', monospace;
 
                     position: absolute;
                     z-index: -1;
@@ -149,7 +149,7 @@
                         margin-left: 2rem;
                     }
                     > p::before {
-                        content: "-";
+                        content: '-';
                         position: absolute;
                         font-size: 1.5rem;
                         left: -2rem;

@@ -1,0 +1,33 @@
+@import '../1-global/0-global', '../0-shared/0-shared';
+
+@mixin footer {
+	background-color: $darker-background;
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+
+	font-size: 1.2rem;
+
+	> div {
+		width: 80%;
+		max-width: 1500px;
+
+		display: flex;
+		justify-content: space-between;
+
+		> a,
+		> p {
+			padding: 1em 0;
+		}
+
+		a,
+		p {
+			color: $lighter-text;
+		}
+
+		a:hover {
+			color: $light-backgoround;
+		}
+	}
+}

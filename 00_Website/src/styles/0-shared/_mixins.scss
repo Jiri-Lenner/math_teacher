@@ -1,156 +1,242 @@
 @mixin underline_animation {
-    & > a::before {
-        content: ' ';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        transform: scalex(0);
-        transform-origin: right bottom;
-        bottom: 0;
-        display: inline-block;
-        height: 0.125rem;
-        background-color: $darker-text;
-        transition: transform 0.2s ease-in;
-    }
+	a {
+		position: relative;
+	}
 
-    & > a:hover::before {
-        transform: scalex(1);
-        transition: transform 0.2s ease-in;
-        transform-origin: left bottom;
-    }
+	& > a::before {
+		content: ' ';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		transform: scalex(0);
+		transform-origin: right bottom;
+		bottom: 0;
+		display: inline-block;
+		height: 0.125rem;
+		background-color: $darker-text;
+		transition: transform 0.2s ease-in;
+	}
 
-    & > a:active {
-        color: $lighter-text;
-        &:before {
-            background-color: $lighter-text;
-        }
-    }
+	& > a:hover::before {
+		transform: scalex(1);
+		transition: transform 0.2s ease-in;
+		transform-origin: left bottom;
+	}
+
+	& > a:active {
+		color: $lighter-text;
+		&:before {
+			background-color: $lighter-text;
+		}
+	}
 }
 
 @mixin button {
-    // my legendary button (nighmare)
-    // ultimately i had redone this button like 20 time before i managed to make it responive to font size and the amout of text you put in
-    // i consider it masterpiece
-    //Here are some of the rules:
+	// my legendary button (nighmare)
+	// ultimately i had redone this button like 20 time before i managed to make it responive to font size and the amout of text you put in
+	// i consider it masterpiece
+	//Here are some of the rules:
 
-    // These are the styles used for the div
-    font-size: 1rem;
-    margin: 2rem 0;
-    display: inline-block;
-    position: relative;
+	// These are the styles used for the div
+	font-size: 1rem;
+	margin: 2rem 0;
+	display: inline-block;
+	position: relative;
 
-    //Styles used for the button inside
-    & > a {
-        z-index: 2;
-        font-family: 'Noto Sans Mono', monospace;
+	//Styles used for the button inside
+	& > a {
+		z-index: 2;
+		font-family: 'Noto Sans Mono', monospace;
 
-        padding: 1em 1.5em;
-        border: 2.5px solid $darker-text;
-        border-radius: 3px;
+		padding: 1em 1.5em;
+		border: 2.5px solid $darker-text;
+		border-radius: 3px;
 
-        // This margin is used to set the space between the line of the element (::after) and the a tag
-        margin: 0 0.6em 0.6em 0;
+		// This margin is used to set the space between the line of the element (::after) and the a tag
+		margin: 0 0.6em 0.6em 0;
 
-        text-decoration: none;
-        color: $darker-text;
-        font-weight: 600;
+		text-decoration: none;
+		color: $darker-text;
+		font-weight: 600;
 
-        // This is also extremely important as the a tag is inline element (hedeache alert!)
-        display: inline-block;
-        // Positioning => need to add the top and left otherwise the animation wont work
-        position: relative;
-        top: 0;
-        left: 0;
-        transition: left 0.15s ease-in, top 0.15s ease-in;
-    }
+		// This is also extremely important as the a tag is inline element (hedeache alert!)
+		display: inline-block;
+		// Positioning => need to add the top and left otherwise the animation wont work
+		position: relative;
+		top: 0;
+		left: 0;
+		transition: left 0.15s ease-in, top 0.15s ease-in;
+	}
 
-    &:hover {
-        > a {
-            left: 0.6em;
-            top: 0.6em;
-        }
-    }
+	&:hover {
+		> a {
+			left: 0.6em;
+			top: 0.6em;
+		}
+	}
 
-    //Styles used for the underline
-    &::after {
-        content: ' ';
-        width: 90%;
-        height: 75%;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        border-right: $darker-text solid 2.5px;
-        border-bottom: $darker-text solid 2.5px;
-        border-bottom-right-radius: 3px;
-    }
-    // Make it lighter when clicking
-    & > a:active {
-        color: $lighter-text;
-        border: $lighter-text solid 2.5px;
-    }
+	//Styles used for the underline
+	&::after {
+		content: ' ';
+		width: 90%;
+		height: 75%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		border-right: $darker-text solid 2.5px;
+		border-bottom: $darker-text solid 2.5px;
+		border-bottom-right-radius: 3px;
+	}
+	// Make it lighter when clicking
+	& > a:active {
+		color: $lighter-text;
+		border: $lighter-text solid 2.5px;
+	}
 }
 
 @mixin sideLine($upper: 0rem, $lower: 0rem) {
-    & {
-        position: relative;
-    }
-    & > .lineContainer {
-        position: absolute;
-        left: -8rem;
-        top: $upper;
-        bottom: $lower;
+	& {
+		position: relative;
+	}
+	& > .lineContainer {
+		position: absolute;
+		left: -8rem;
+		top: $upper;
+		bottom: $lower;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 2.4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 2.4rem;
 
-        .lineContainer--pageNumber {
-            font-family: 'Noto Sans Mono', monospace;
-            background-color: white;
-            font-size: 1.6rem;
-            padding: 0.4rem;
-            transform: rotate(90deg);
-            color: $darker-text;
-            top: 15rem;
-            position: absolute;
-            @content;
-        }
+		.lineContainer--pageNumber {
+			font-family: 'Noto Sans Mono', monospace;
+			background-color: white;
+			font-size: 1.6rem;
+			padding: 0.4rem;
+			transform: rotate(90deg);
+			color: $darker-text;
+			top: $upper;
+			position: absolute;
+			@content;
+		}
 
-        .lineContainer--line {
-            width: 3px;
-            height: 100%;
-            background-color: $darker-text;
-        }
-    }
+		.lineContainer--line {
+			width: 3px;
+			height: 100%;
+			background-color: $darker-text;
+
+			@media (max-width: 1300px) {
+				left: 0rem;
+			}
+		}
+	}
 }
 
 @mixin title {
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: 3rem;
-    font-weight: 900;
-    color: $dark-text;
-    margin-bottom: 1.5rem;
-    word-spacing: -0.8rem;
-    @content;
+	font-family: 'Noto Sans Mono', monospace;
+	font-size: 3rem;
+	font-weight: 900;
+	color: $dark-text;
+	margin-bottom: 1.5rem;
+	word-spacing: -0.8rem;
+	@content;
 }
 
 @mixin lowerTitle {
-    font-family: 'Noto Sans Mono', monospace;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: $darker-text;
-    margin-bottom: 2rem;
-    word-spacing: -0.8rem;
-    @content;
+	font-family: 'Noto Sans Mono', monospace;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: $darker-text;
+	margin-bottom: 2rem;
+	word-spacing: -0.8rem;
+	@content;
 }
 
 @mixin regularText {
-    font-family: 'Noto Sans Mono', monospace;
-    line-height: 1.8rem;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    text-align: justify;
+	font-family: 'Noto Sans Mono', monospace;
+	line-height: 1.8rem;
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+	text-align: justify;
 
-    @content;
+	@content;
+}
+
+@mixin formItem {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 2rem;
+
+	> label {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		margin-bottom: 0.5em;
+	}
+}
+
+@mixin hamburger {
+	.body__header__nav__container__hamburger {
+		display: inline-block;
+
+		margin-left: auto;
+		width: 2rem;
+		height: 1.5rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		padding: 10px;
+		border-radius: 5px;
+
+		div {
+			position: relative;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background-color: $darker-text;
+			transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+		}
+		div:nth-child(1) {
+			transform: rotate(0deg) translateX(0);
+			transform-origin: 0.338562172rem 100%;
+		}
+		div:nth-child(3) {
+			transform: rotate(0deg) translateX(0);
+			transform-origin: 0.338562172rem 100%;
+		}
+	}
+	.hamburger_active {
+		cursor: pointer;
+
+		div {
+			transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+		}
+
+		div:nth-child(2) {
+			opacity: 0;
+		}
+
+		div:nth-child(1) {
+			transform: rotate(45deg) translateX(0.338562172rem);
+			transform-origin: 0.338562172rem 0%;
+		}
+		div:nth-child(3) {
+			transform: rotate(-45deg) translateX(0.338562172rem);
+			transform-origin: em 100%;
+		}
+	}
+
+	.body__header__nav__container__hamburger:hover {
+		cursor: pointer;
+	}
+
+	.body__header__nav__container__hamburger:active {
+		div {
+			background-color: $lighter-text;
+		}
+	}
 }

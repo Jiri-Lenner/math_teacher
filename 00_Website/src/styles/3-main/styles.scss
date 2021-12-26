@@ -1,35 +1,32 @@
 //Header styles
-@import "../2-modules/header";
+@import '../2-modules/header';
 //Main
-@import "../2-modules/main";
+@import '../2-modules/main';
 //Footer
-@import "../2-modules/footer";
+@import '../2-modules/footer';
 
 //Hide Scrollbar
 :root {
-    /* ::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none; */
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-    font-family: "Noto Sans Display", sans-serif;
-    ::selection {
-        background-color: #5959594f;
-    }
+	font-family: 'Noto Sans Display', sans-serif;
+	::selection {
+		background-color: #5959594f;
+	}
+	overflow-x: hidden;
 }
 
 //Header
 body > header {
-    @include header;
-    position: relative;
+	@include header;
+	position: relative;
 }
 //Main
 body > main {
-    @include main;
+	@include main;
 }
 //Footer
 body > footer {
+	@include footer;
 }

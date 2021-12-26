@@ -31,15 +31,31 @@
         <nav id="navBar">
             <div id="nav__container">
                 <a id="site__logo" href="#top">
-                    <img src="./images/142713-200.png" alt="">
+                    <img src="./images/logo.png" alt="">
                 </a>
                 <a href="#container__aboutMe">O MNĚ</a>
                 <a href="#container__video">VIDEO</a>
                 <a href="#container__services">SLUŽBY</a>
-                <a href="">RECENZE</a>
-                <a href="">KONTAKT</a>
+                <a href="#container__contact_form">KONTAKT</a>
+                <a href="#container__reviews">RECENZE</a>
+                <div class="body__header__nav__container__hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </nav>
+
+        <div class="body__header__extendable_nav body__header__extendable_nav--closed">
+            <div class="body__header__extendable_nav__button_container">
+                <a href="#container__aboutMe">O MNĚ</a>
+                <a href="#container__video">VIDEO</a>
+                <a href="#container__services">SLUŽBY</a>
+                <a href="#container__contact_form">KONTAKT</a>
+                <a href="#container__reviews">RECENZE</a>
+            </div>
+        </div>
+
         <!--Homepage-->
         <section class="intro__container">
             <!--Line Start-->
@@ -88,7 +104,9 @@
                     </p>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quia aperiam illum culpa voluptas,
-                        impedit tempore aut quae! Blanditiis recusandae provident, hic deserunt qui enim cupiditate
+                        impedit tem
+
+                        pore aut quae! Blanditiis recusandae provident, hic deserunt qui enim cupiditate
                         dolores aliquid aut itaque alias tempora nobis? Veniam, nisi. Vitae necessitatibus aliquid quae,
                     </p>
                     <p>
@@ -210,7 +228,7 @@
                         <p>Lorem ipsum dolor sit ameat, reiciendis cum alias temporibus possimus nisi libero, delectus
                             omnis
                             facilis a magni. Voluptates.</p>
-                        <div><a href="">Kontaktuj mě!</a></div>
+                        <div><a href="#container__contact_form">Kontaktuj mě!</a></div>
                     </div>
                 </article>
                 <article id="article02">
@@ -222,7 +240,7 @@
                         <p>Lorem ipsum dolor sit ameat, reiciendis cum alias temporibus possimus nisi libero, delectus
                             omnis
                             facilis a magni. Voluptates.</p>
-                        <div><a href="">Kontaktuj mě!</a></div>
+                        <div><a href="#container__contact_form">Kontaktuj mě!</a></div>
                     </div>
                     <img data-aos="fade-left" src="./images/backgrounds/work.jpg" alt="">
 
@@ -237,7 +255,7 @@
                         <p>Lorem ipsum dolor sit ameat, reiciendis cum alias temporibus possimus nisi libero, delectus
                             omnis
                             facilis a magni. Voluptates.</p>
-                        <div><a href="">Kontaktuj mě!</a></div>
+                        <div><a href="#container__contact_form">Kontaktuj mě!</a></div>
                     </div>
                 </article>
                 <article id="article04">
@@ -249,7 +267,7 @@
                         <p>Lorem ipsum dolor sit ameat, reiciendis cum alias temporibus possimus nisi libero, delectus
                             omnis
                             facilis a magni. Voluptates.</p>
-                        <div><a href="">Kontaktuj mě!</a></div>
+                        <div><a href="#container__contact_form">Kontaktuj mě!</a></div>
                     </div>
                     <img data-aos="fade-left" src="./images/backgrounds/work.jpg" alt="">
 
@@ -276,20 +294,103 @@
                         <p>Lorem ipsum dolor sit ameat, reiciendis cum alias temporibus possimus nisi libero, delectus
                             omnis
                             facilis a magni. Voluptates.</p>
-                        <div><a href="">Kontaktuj mě!</a></div>
+                        <div><a href="#container__contact_form">Kontaktuj mě!</a></div>
                     </div>
                     <img data-aos="fade-left" src="./images/backgrounds/work.jpg" alt="">
 
                 </article>
 
             </section>
-            <section>
+            <section class="container__contact_form" id="container__contact_form">
+                <!--Line-->
+                <div class="lineContainer">
+                    <p class="lineContainer--pageNumber">00005</p>
+                    <div class="lineContainer--line"></div>
+                </div>
 
+                <img data-aos="fade-right" data-aos-delay="400" src="./images/backgrounds/typewriter.jpg" alt="">
+
+                <form action="">
+                    <h2 data-aos="fade-up">## Kontaktuj mě!</h2>
+                    <div data-aos="fade-up" class="container__contact_form--name">
+                        <label for="userName">Jméno</label>
+                        <input id="userName" type="text">
+                    </div>
+                    <div data-aos="fade-up" class="container__contact_form--surname">
+                        <label for="userSurname">Email</label>
+                        <input id="userSurname" type="email">
+                    </div>
+                    <div data-aos="fade-up" class="container__contact_form--subject">
+                        <label for="topic">Předmět</label>
+                        <input id="topic" type="text">
+                    </div>
+                    <div data-aos="fade-up" class="container__contact_form--description">
+                        <label for="description">Popisek</label>
+                        <textarea name="" id="description"></textarea>
+                    </div>
+                    <div data-aos="fade-up" class="container__contact_form--submit"><a href=""> Odeslat zprávu! </a>
+                    </div>
+                </form>
+            </section>
+            <section class="container__reviews" id="container__reviews">
+
+                <!--Line-->
+                <div class="lineContainer">
+                    <p class="lineContainer--pageNumber">00004</p>
+                    <div class="lineContainer--line"></div>
+                </div>
+
+                <h2 data-aos="fade-right">## Recenze</h2>
+                <article data-aos="fade-up">
+                    <h3>"Dočasný a spolehlivý"</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, corporis.!</p>
+                    <!--Signature-->
+                    <div>
+                        <div>
+                            <img src="./images/reviews/parker_p.jpg" alt="">
+                        </div>
+                    </div>
+                    <h4>Peter Parker</h4>
+                    <img src="./images/reviews/parker_s.png" alt="">
+                </article>
+                <article data-aos="fade-up" data-aos-delay="200">
+                    <h3>"Dočasný a spolehlivý"</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, corporis.!</p>
+                    <!--Signature-->
+                    <div>
+                        <img src="./images/reviews/jamie_p.jpg" alt="">
+                    </div>
+                    <h4>Jamie Lannister</h4>
+                    <img src="./images/reviews/jamie_s.png" alt="">
+                </article>
+                <article data-aos="fade-up" data-aos-delay="400">
+                    <h3>"Dočasný a spolehlivý"</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, corporis.!</p>
+                    <!--Signature-->
+                    <div>
+                        <img src="./images/reviews/peter_p.jpg" alt="">
+                    </div>
+                    <h4>Peter Todorov</h4>
+                    <img src="./images/reviews/peter_s.png" alt="">
+                </article>
+                <article data-aos="fade-up" data-aos-delay="600">
+                    <h3>"Dočasný a spolehlivý"</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, corporis.!</p>
+                    <!--Signature-->
+                    <div>
+                        <img src="./images/reviews/eren_p.jpg" alt="">
+                    </div>
+                    <h4>Eren Jeager</h4>
+                    <img src="./images/reviews/eren_s.png" alt="">
+                </article>
             </section>
         </div>
     </main>
     <footer>
-
+        <div>
+            <a href="http://www.flaticon.com">Icons designed by Freepik</a>
+            <p>Designed and produced by <a href="">Jiří Lenner Junior</a> </p>
+        </div>
     </footer>
     <script src="./scripts/script.js"></script>
     <!--AOS-->

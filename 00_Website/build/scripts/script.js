@@ -38,26 +38,52 @@ const hamburger = document.querySelector('.body__header__nav__container__hamburg
 const slideMenu = document.querySelector('.body__header__extendable_nav');
 hamburger.addEventListener('click', e => {
 	hamburger.classList.toggle('hamburger_active');
-	slideMenu.classList.toggle('body__header__extendable_nav--closed');
-	if (scrollFlag) {
-		navbar.classList.remove('nav__stick');
-		scrollFlag = false;
-		document.body.style.overflowY = 'hidden';
-	} else {
+
+	if (!scrollFlag) {
+		setTimeout(() => {
+			slideMenu.classList.toggle('body__header__extendable_nav--closed');
+		}, 200);
+
 		document.body.style.overflowY = 'scroll';
 		if (!(window.scrollY <= 20)) {
 			navbar.classList.add('nav__stick');
 		}
 		scrollFlag = true;
+	} else {
+		slideMenu.classList.toggle('body__header__extendable_nav--closed');
+
+		setTimeout(() => {
+			navbar.classList.remove('nav__stick');
+		}, 400);
+		scrollFlag = false;
+		document.body.style.overflowY = 'hidden';
+
+		openFlag = false;
 	}
+});
+
+const logo = document.querySelector('#site__logo');
+logo.addEventListener('click', e => {
+	hamburger.classList.remove('hamburger_active');
+	setTimeout(() => {
+		slideMenu.classList.add('body__header__extendable_nav--closed');
+	}, 200);
+
+	document.body.style.overflowY = 'scroll';
+	if (!(window.scrollY <= 20)) {
+		navbar.classList.add('nav__stick');
+	}
+	scrollFlag = true;
 });
 
 const slideMenuLinks = document.querySelectorAll('.body__header__extendable_nav__button_container > a');
 
 for (link of slideMenuLinks) {
 	link.addEventListener('click', e => {
-		hamburger.classList.toggle('hamburger_active');
-		slideMenu.classList.toggle('body__header__extendable_nav--closed');
+		hamburger.classList.remove('hamburger_active');
+		setTimeout(() => {
+			slideMenu.classList.add('body__header__extendable_nav--closed');
+		}, 200);
 
 		document.body.style.overflowY = 'scroll';
 		if (!(window.scrollY <= 20)) {
@@ -66,3 +92,19 @@ for (link of slideMenuLinks) {
 		scrollFlag = true;
 	});
 }
+
+// watching for window size
+window.addEventListener('resize', e => {
+	if (window.innerWidth > 900) {
+		hamburger.classList.remove('hamburger_active');
+		setTimeout(() => {
+			slideMenu.classList.add('body__header__extendable_nav--closed');
+		}, 200);
+
+		document.body.style.overflowY = 'scroll';
+		if (!(window.scrollY <= 20)) {
+			navbar.classList.add('nav__stick');
+		}
+		scrollFlag = true;
+	}
+});

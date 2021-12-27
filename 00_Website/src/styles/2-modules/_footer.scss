@@ -30,4 +30,15 @@
 			color: $light-backgoround;
 		}
 	}
+	@media (max-width: 900px) {
+		font-size: 1rem;
+		div {
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+	@media (max-width: 450px) {
+		font-size: 0.8rem;
+	}
 }
